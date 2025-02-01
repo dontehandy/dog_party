@@ -1,0 +1,166 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Header and footer styles */
+/* Padding Adjustment: Changing the padding of the header to 40px increases the space inside the header, making it more spacious. */
+/* Impact on Layout: The increased padding pushes other elements down, affecting the overall layout of the page. */
+/* Visual Enhancement: The additional space can enhance the visual appeal and readability of the header content. */
+header, footer {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  background-color: #75e2e6; /* Header background color */
+}
+
+footer {
+  background-color: #048eaa; /* Footer background color */
+  flex-direction: column;
+  justify-content: center;
+}
+
+footer p {
+  color: #ffffff;
+  margin-bottom: 20px; /* Add margin to create space between the text and the logos */
+}
+
+/* Social media icons */
+.social-media {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icon {
+  height: 30px;
+}
+
+/* Logo styles */
+.logo {
+  height: 50px;
+}
+
+/* Navigation list styles */
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+li a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+}
+
+/* Hero section styles */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  position: relative;
+  color: #ffffff;
+}
+
+.hero::before {
+  content: "";
+  background: url('assets/park.jpg') no-repeat center center;
+  background-size: cover;
+  filter: brightness(0.5); /* Adjust the brightness */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+}
+
+.hero h1 span {
+  font-weight: 100; /* Make "A Site About" even thinner */
+}
+
+.hero h1 strong {
+  font-weight: 700; /* Make "Some Dogs" noticeably thicker */
+}
+
+.hero img {
+  border-radius: 50%;
+  margin: 20px 0;
+  border: 5px solid #75e2e6; /* Add border to match the color of the header */
+}
+
+.hero form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero label {
+  margin-bottom: 5px;
+}
+
+.hero input, .hero button, .dog-info button {
+  width: 300px; /* Adjust the width to match the length of the text "A Site About Some Dogs" */
+  padding: 10px;
+  margin: 5px 0;
+  box-sizing: border-box;
+}
+
+.hero button, .dog-info button {
+  background-color: #75e2e6;
+  border: none;
+  cursor: pointer;
+}
+
+/* Info section styles */
+.info {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 50px 20px;
+  background-color: #f0f0f0;
+}
+
+/* Dog info styles */
+.dog-info {
+  text-align: center;
+  max-width: 200px;
+}
+
+/* Border colors for dog images */
+/* The .hero img selector is used to add a border to the hero image, matching the header color. Above */
+/* The .dog-info img selector is used to add a border to the dog images, matching the footer color. */
+.dog-info img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  border: 5px solid #048eaa; /* Add border to match the color of the footer */
+}
+
+.dog-info h2 {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+.dog-info p {
+  font-size: 1em;
+  margin: 10px 0;
+}
+
+.dog-info button {
+  width: 200px;
+  background-color: #048eaa;
+  color: #ffffff;
+}
+
+/* The line li a is a CSS descendant selector. It targets <a> elements that are descendants of <li> elements. This means it will apply the specified styles to all anchor (<a>) tags that are inside list item (<li>) tags. */
